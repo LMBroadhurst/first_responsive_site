@@ -1,0 +1,110 @@
+/* Using floats only */
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+  
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+  
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+header, section, footer {
+    height: 150px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header, footer {
+    float: left;
+    width: 98%;
+    margin: 30px 1%;
+    border: 1px solid black;
+    background-color: salmon;
+}
+
+h1 {
+    text-align: center;
+    margin: 1px;
+}
+
+
+
+.s-1-3-column {
+    width: 31.33%;
+    float: left;
+    border: 1px solid black;
+    margin: 30px 1%;
+    background-color: yellowgreen;
+}
+
+.s-1-2-column {
+    width: 48%;
+    float: left;
+    border: 1px solid black;
+    margin: 30px 1%;
+    background-color: peachpuff;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .s-1-3-column {
+      /* screen = 0px */
+      background-color: salmon;
+      width: 98%;
+    }
+    .s-1-2-column {
+        /* screen = 0px */
+        background-color: salmon;
+        width: 98%;
+      }
+    .tablet, .full-screen {
+        color: salmon;
+    }
+  }
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .s-1-3-column {
+        /* screen = 0px */
+        background-color: peachpuff;
+        width: 48%;
+    }
+
+    .s-1-3-column.drop-down {
+    /* screen = 0px */
+    background-color: salmon;
+    width: 98%;
+    }
+
+    .s-1-2-column {
+        background-color: peachpuff;
+    }
+
+    .full-screen, .mobile {
+        color: salmon;
+    }
+}
+
+@media (min-width: 901px) {
+    .mobile, .tablet {
+        color: salmon
+    }
+}
